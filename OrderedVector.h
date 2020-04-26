@@ -122,6 +122,7 @@ public:
 	    }
 	    return false;
 	}
+};
 /*IteratorV<T> begin()const {
     if (_data)
         return IteratorV<T>(_data);
@@ -370,5 +371,3 @@ IteratorV<T> Remove(const T& value,int) {
         return resIt;
     }
 }*/
-
-};
