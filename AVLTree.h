@@ -86,7 +86,7 @@ class Set {
 		else if (p->_key < key)return Find(p->_right, key);
 		else return p;
 	}
-	void Print(Node* node, int offset) // offset - ���-�� ���������
+	void Print(Node* node, int offset) const // offset - ���-�� ���������
 	{
 		cout << string(offset, ' ');
 		if (node == nullptr)
@@ -139,7 +139,11 @@ public:
 	bool Find(const T& key) const {
 		return Find(_root, key)!=nullptr;
 	}
-	
+
+	bool Contains(const T& key) const {
+	    return Find(key);
+	}
+
 	void Insert(const T& key) {
 		_root = Insert(_root, key);//��� ������� ������ ����� ����������
 	}
