@@ -34,11 +34,10 @@ public:
 		return _elCount;
 	}
 	static const std::size_t DEFAULT_SIZE=17;
-	UnorderedSet(){
+	UnorderedSet():_size(DEFAULT_SIZE){
 		_hashArr = new Node*[DEFAULT_SIZE];
 		for(size_t i=0;i<DEFAULT_SIZE;++i)
 			_hashArr[i] = nullptr;
-		_size = DEFAULT_SIZE;
 		_elCount = 0;
 	}
 	UnorderedSet(std::size_t size):_hashArr(new Node*[size]),_size(size),_elCount(0){
@@ -114,7 +113,7 @@ bool Contains(const TKey& key){
 		for (std::size_t i = 0;i < _size;++i) {
 			auto tmp = _hashArr[i];
 			while (tmp) {
-				std::cout <<"("<< tmp->_value<<"||"<< tmp->_key<<")"<<"->";
+				std::cout <<"("<< tmp->_key<<")"<<"->";
 				tmp = tmp->_next;
 			}
 			std::cout << "nullptr";
