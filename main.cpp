@@ -1,9 +1,9 @@
 #include<chrono>
-#include"UnorderedSet.h"
 #include"AVLTree.h"
 #include"OrderedVector.h"
+#include"UnorderedSet.h"
 using namespace std;
-template<class T> using CollectionType = OrderedVector<T>;
+template<class T> using CollectionType = Set<T>;
 int main() {
 	chrono::steady_clock time1;
     CollectionType <int> collection;
