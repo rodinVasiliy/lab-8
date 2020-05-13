@@ -10,8 +10,8 @@ std::size_t binSearch(T* arr,const std::size_t size,const T& key) {
 		mid = (r + l) / 2;
 		if (key < arr[mid])r = mid - 1;
 		else if (arr[mid] < key)l = mid + 1;
-		else return mid;
-	}
+		else return mid;////////86
+	}/////////////////////////// 3 53 69 79 85 90 100 299 400
 	return l;
 }
 template<typename T>
@@ -122,7 +122,6 @@ public:
 	    }
 	    return false;
 	}
-};
 /*IteratorV<T> begin()const {
     if (_data)
         return IteratorV<T>(_data);
@@ -371,3 +370,5 @@ IteratorV<T> Remove(const T& value,int) {
         return resIt;
     }
 }*/
+
+};
